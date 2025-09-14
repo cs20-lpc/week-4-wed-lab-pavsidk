@@ -29,6 +29,7 @@ int main() {
         cerr << e << endl;
     }
 
+
     // remove an element
     myList.remove(3);
 
@@ -36,8 +37,13 @@ int main() {
     cout << myList;
 
     // get the second element and display it
-    string word = myList.getElement(2);
-    cout << "Element 2: " << word << endl;
+    try {
+        string word = myList.getElement(2);
+        cout << "Element 2: " << word << endl;
+    }
+    catch (string& e) {
+        cerr << e << endl;
+    }
 
     // create a second list using the copy constructor
     LinkedList<string> secondList = myList;

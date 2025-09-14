@@ -57,7 +57,30 @@ void LinkedList<T>::clear() {
 template <typename T>
 void LinkedList<T>::copy(const LinkedList<T>& copyObj) {
     // TODO
+    this->head = nullptr;
+
+    if (copyObj.head == nullptr) {
+        this->length = 0;
+        return;
+    }
+
+    this->head = new Node;
+    this->head->value = copyObj.head->value;
+    
+    Node* curr = this->head;
+    Node* copyCurr = copyObj.head->next;
+
+    while (copyCurr != nullptr) {
+        curr->next = new Node;
+        curr = curr->next;
+        curr->value = copyCurr->value;
+        copyCurr = copyCurr->next;
+    }
+
+    curr->next = nullptr;
+    this->length = copyObj.length;
 }
+
 
 template <typename T>
 T LinkedList<T>::getElement(int position) const {
@@ -82,6 +105,29 @@ int LinkedList<T>::getLength() const {
 template <typename T>
 void LinkedList<T>::insert(int position, const T& elem) {
     // TODO
+    if (position < 0 || position > this->length) {
+        throw string("insert: error, position is out of bounds");
+    }
+
+    Node* curr = head;
+    Node* n = new Node;
+    n->value = elem;
+    Node* prev = nullptr;
+    
+    for (int i = 0; i < position; i++) {
+        prev = curr;
+        curr = curr->next;
+    }
+
+    if (prev == nullptr) {
+        n->next = head;
+        head = n;
+    }
+    else {
+        n->next = curr;
+        prev->next = n;
+    }
+    this->length++;
 }
 
 template <typename T>
@@ -92,6 +138,32 @@ bool LinkedList<T>::isEmpty() const {
 template <typename T>
 void LinkedList<T>::remove(int position) {
     // TODO
+    this->length--;
+    if (position < 0 || position >= this->length) {
+        throw string("remove: error, position out of bounds");
+    }
+
+    Node* curr = head;
+    Node* prev = nullptr;;
+
+    
+    if (position == 0) {
+        head = curr->next;
+        delete curr;
+        return;
+    }
+
+    for (int i = 0; i < position; i++) {
+        prev = curr;
+        curr = curr->next;
+    }
+
+    if (curr == nullptr) {
+        throw string("remove error, out of bounds");
+    }
+
+    prev->next = curr->next;
+    delete curr;
 }
 
 template <typename T>
