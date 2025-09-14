@@ -91,10 +91,14 @@ int main() {
     //copy list
     cout << "   TESTING DEEP COPY" << endl;
     cout << "*--------------------*" << endl;
+    cout << "Copying myList using the overloaded = assignment operator." << endl;
     cout << "Contents of myList: " << myList << endl;
     LinkedList<string> copyList = myList;
     cout << "Contents of copyList: " << copyList << endl;
-    cout << "Inserting an element into copyList at position 1. " << endl;
+    cout << "Copying myList using the copy constructor. " << endl;
+    LinkedList<string> copyListTwo(myList);
+    cout << "Contents of copyListTwo: " << copyListTwo << endl;
+    cout << "Inserting an element into copyList at position 1 to check that it is a deep copy. " << endl;
     copyList.insert(1, "additional");
     cout << "Contents of copyList: " << copyList << endl;
     cout << "Contents of myList: " << myList << endl;
@@ -126,6 +130,10 @@ int main() {
     cout << "Inserting an element to the empty intList. " << endl;
     intList.insert(0, 100);
     cout << "Contents of intList: " << intList << endl;
+    cout << "   *----*" << endl;
+    cout << "Copying IntList using the copy constructor. " << endl;
+    LinkedList<int> copyIntList(intList);
+    cout << "Contents of copyIntList: " << copyIntList << endl;
     cout << endl;
 
 

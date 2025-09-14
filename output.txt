@@ -48,11 +48,15 @@ replace: error, position out of bounds
 
    TESTING DEEP COPY
 *--------------------*
+Copying myList using the overloaded = assignment operator.
 Contents of myList: within --> word --> program
 
 Contents of copyList: within --> word --> program
 
-Inserting an element into copyList at position 1. 
+Copying myList using the copy constructor. 
+Contents of copyListTwo: within --> word --> program
+
+Inserting an element into copyList at position 1 to check that it is a deep copy. 
 Contents of copyList: within --> additional --> word --> program
 
 Contents of myList: within --> word --> program
@@ -78,4 +82,8 @@ Contents of intList: List is empty, no elements to display.
    *----*
 Inserting an element to the empty intList. 
 Contents of intList: 100
+
+   *----*
+Copying IntList using the copy constructor. 
+Contents of copyIntList: 100
 
