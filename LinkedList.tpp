@@ -138,7 +138,6 @@ bool LinkedList<T>::isEmpty() const {
 template <typename T>
 void LinkedList<T>::remove(int position) {
     // TODO
-    this->length--;
     if (position < 0 || position >= this->length) {
         throw string("remove: error, position out of bounds");
     }
@@ -148,6 +147,7 @@ void LinkedList<T>::remove(int position) {
 
     
     if (position == 0) {
+        this->length--;
         head = curr->next;
         delete curr;
         return;
@@ -164,6 +164,7 @@ void LinkedList<T>::remove(int position) {
 
     prev->next = curr->next;
     delete curr;
+    this->length--;
 }
 
 template <typename T>

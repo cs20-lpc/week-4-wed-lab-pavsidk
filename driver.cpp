@@ -1,4 +1,3 @@
-/*
 #include "LinkedList.hpp"
 #include <string>
 
@@ -21,6 +20,7 @@ int main() {
     myList.append("program");
     cout << "Length of myList after appending two strings: " << myList.getLength() << endl;
     cout << endl;
+    cout << endl;
 
     //testing insert
     cout << "   TESTING INSERT" << endl;
@@ -42,6 +42,7 @@ int main() {
     catch (string& e) {
         cerr << e << endl;
     }
+    cout << endl;
     cout << endl;
 
     //testing remove
@@ -66,6 +67,7 @@ int main() {
         cerr << e << endl;
     }
     cout << endl;
+    cout << endl;
 
     //testing replace
     cout << "   TESTING REPLACE" << endl;
@@ -84,6 +86,7 @@ int main() {
         cerr << e << endl;
     }
     cout << endl;
+    cout << endl;
 
     //copy list
     cout << "   TESTING DEEP COPY" << endl;
@@ -95,7 +98,7 @@ int main() {
     copyList.insert(1, "additional");
     cout << "Contents of copyList: " << copyList << endl;
     cout << "Contents of myList: " << myList << endl;
-
+    cout << endl;
     cout << endl;
 
     //clear
@@ -106,6 +109,8 @@ int main() {
     cout << "Contents of copyList: " << copyList << endl;
     cout << endl;
 
+    cout << endl;
+
     //integer list
     cout << "   OTHER DATATYPE" << endl;
     cout << "*--------------------*" << endl;
@@ -114,25 +119,14 @@ int main() {
     cout << "Contents of intList: " << intList << endl;
     cout << endl;
     cout << "   *----*" << endl;
+    cout << "Removing the only element in intList. " << endl;
     intList.remove(0);
     cout << "Contents of intList: " << intList << endl;
+    cout << "   *----*" << endl;
+    cout << "Inserting an element to the empty intList. " << endl;
+    intList.insert(0, 100);
+    cout << "Contents of intList: " << intList << endl;
+    cout << endl;
+
 
 }
-
-// Methods to test:
-// 1. LinkedList()                  // default constructor U
-// 2. LinkedList(const LinkedList&) // copy constructor   Verify deep copy — make sure modifying the copy doesn’t affect the original:
-// 3. ~LinkedList()                 // destructor
-// 4. operator=                     // assignment operator     U
-// 5. operator<<                     // output stream operator U
-// 6. append(const T&)              // add element to end      U
-// 7. clear()                       // delete all nodes        U
-// 8. copy(const LinkedList&)       // deep copy helper         U
-// 9. getElement(int) const         // access element by index  U
-// 10. getLength() const            // get current list length  U
-// 11. isEmpty() const              // check if list is empty   U
-// 12. insert(int, const T&)        // insert element at index  U
-// 13. remove(int)                  // remove element at index  U
-// 14. replace(int, const T&)       // replace element at index U
-
-*/

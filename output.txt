@@ -1,0 +1,81 @@
+   TESTING APPEND
+*--------------------*
+Length of empty myList: 0
+Checking using the 'isEmpty' method: The list is empty. 
+Length of myList after appending two strings: 2
+
+
+   TESTING INSERT
+*--------------------*
+Contents of myList after inserting two strings (both in the beginning): is --> the --> This --> program
+
+   *----*
+Contents of myList after inserting a string in the end of the list: is --> the --> This --> end --> program
+
+   *----*
+Contents of myList after inserting a string in between the list: is --> the --> within --> This --> end --> program
+
+   *----*
+Trying to insert an element to myList at position 15 (out of bounds). 
+insert: error, position is out of bounds
+
+
+   TESTING REMOVE
+*--------------------*
+Contents of myList: is --> the --> within --> This --> end --> program
+
+Removing element of myList at position 1. 
+   *----*
+Removing element of myList at position 0. 
+   *----*
+Removing element of myList at last position. 
+   *----*
+Contents of myList: within --> This --> program
+
+Trying to remove element of myList at position 10 (out of bounds). 
+remove: error, position out of bounds
+
+
+   TESTING REPLACE
+*--------------------*
+Element of myList at position 1: This
+Replacing element of myList at position 1. 
+Element of myList at position 1: word
+   *----*
+Trying to replace element of myList at position 9 (out of bounds). 
+replace: error, position out of bounds
+
+
+   TESTING DEEP COPY
+*--------------------*
+Contents of myList: within --> word --> program
+
+Contents of copyList: within --> word --> program
+
+Inserting an element into copyList at position 1. 
+Contents of copyList: within --> additional --> word --> program
+
+Contents of myList: within --> word --> program
+
+
+
+   TESTING CLEAR
+*--------------------*
+Clearing contents of copyList. 
+Contents of copyList: List is empty, no elements to display.
+
+
+
+   OTHER DATATYPE
+*--------------------*
+Contents of intList: 10
+
+
+   *----*
+Removing the only element in intList. 
+Contents of intList: List is empty, no elements to display.
+
+   *----*
+Inserting an element to the empty intList. 
+Contents of intList: 100
+

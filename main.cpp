@@ -1,3 +1,5 @@
+/*
+
 #include "LinkedList.hpp"
 #include <string>
 
@@ -104,3 +106,5 @@ int main() {
     // terminate
     return 0;
 }
+
+*/
